@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wishlist k narozeninám</title>
+  <title>Kačka Wishlist</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -11,115 +11,46 @@
   <style>
     body {
       padding: 2rem;
-      background-color: #f9f9f9;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
     }
-    .gift-item {
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
       background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-      display: flex;
-      gap: 1rem;
-      align-items: center;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      text-align: center;
     }
-    .gift-item img {
-      max-width: 150px;
-      border-radius: 6px;
-      object-fit: contain;
-    }
-    .gift-info {
-      flex: 1;
-    }
-    .gift-link {
+    a.btn-wishlist {
+      margin-top: 1.5rem;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      color: #0d6efd;
+      color: white;
+      background-color: #0d6efd;
+      border-radius: 6px;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-    .gift-link:hover {
-      text-decoration: underline;
-    }
-    .price {
-      font-weight: 700;
-      margin-top: 0.5rem;
-      color: #198754;
+    a.btn-wishlist:hover {
+      background-color: #084cd0;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1 class="mb-4">Wishlist k narozeninám 🎁</h1>
-
-  <div class="gift-item">
-    <img src="https://i.snbz.cz/products/1500x1500/shop1/snowboard-jones-wms-dream-weaver.jpeg" alt="Snowboard Jones WMS Dream Weaver" />
-    <div class="gift-info">
-      <a href="https://www.snowboard-zezula.cz/snowboard-jones-wms-dream-weaver/pn-145892" target="_blank" class="gift-link">Snowboard Jones WMS Dream Weaver</a>
-      <div class="price">Cena: 14 990 Kč</div>
-    </div>
+  <div class="container">
+    <h1>Kačka - Můj Wishlist 🎁</h1>
+    <p>Podívej se na můj seznam přání k narozeninám na GitHubu.</p>
+    <a
+      href="https://github.com/4ME280-Webdesign-a-uzivatelska-rozhrani/kacka-v-wishlist/blob/3b0f149f0620803ca1898db944f8b616d5e87d63/darky"
+      target="_blank"
+      class="btn-wishlist"
+      >Zobrazit Wishlist</a
+    >
   </div>
-
-  <div class="gift-item">
-    <img src="https://travelking.cdn.it7.sk/img/infopages/v2/landing-page/2024/gift-coupons/vanoce_2_CZ.webp" alt="Dárkový poukaz Travelking" />
-    <div class="gift-info">
-      <a href="https://travelking.cz/darkovy-poukaz" target="_blank" class="gift-link">Dárkový poukaz na cestování (Travelking)</a>
-      <div class="price">Cena: od 1 000 Kč</div>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <img src="https://www.jarmy.cz/fotky57821/fotos/_vyr_333_svitici-poi-oddballs-70mm-jarmy-001.jpg" alt="LED poi Oddballs 70mm" />
-    <div class="gift-info">
-      <a href="https://www.jarmy.cz/led-poi-oddballs-70mm-usb-pro-dobijeci" target="_blank" class="gift-link">LED poi Oddballs 70mm (USB dobíjecí)</a>
-      <div class="price">Cena: cca 1 800 Kč</div>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <img src="https://image.alza.cz/products/DJI2543/DJI2543.jpg?width=1400&height=1400" alt="Dron DJI Mavic 4 Pro" />
-    <div class="gift-info">
-      <a href="https://www.alza.cz/dji-mavic-4-pro-d12920805.htm" target="_blank" class="gift-link">Dron DJI Mavic 4 Pro</a>
-      <div class="price">Cena: cca 49 000 Kč</div>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <img src="https://bwtbooks.cz/assets/img//books/nejsou_to_slapky_obalka.jpg" alt="Kniha Nejsou to šlapky" />
-    <div class="gift-info">
-      <a href="https://bwtbooks.cz/kniha/petr-jan-juracka-nejsou-to-slapky" target="_blank" class="gift-link">Kniha „Nejsou to šlapky“ – Petr Jan Juračka</a>
-      <div class="price">Cena: 590 Kč</div>
-    </div>
-  </div>
-
-  <!-- Ostatní položky bez obrázků -->
-
-  <div class="gift-item">
-    <div class="gift-info">
-      <a href="https://www.drawplanet.cz/kurz/kurz-akvarel-ilustrace/" target="_blank" class="gift-link">Kurz Akvarel & ilustrace (DrawPlanet)</a>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <div class="gift-info">
-      <a href="https://www.smichoffer.cz/poukazky/permanentky/darkova-poukazka-na-studentskou-permanentku-na-10-vstupu.html" target="_blank" class="gift-link">Dárková permanentka na 10 vstupů (Smíchoffer)</a>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <div class="gift-info">
-      <a href="https://www.luskni.cz/e-shop/motocykly-a-skutry-gg/motocykl-street-r-125cc-barton-motors-cerno-cervena-60376/" target="_blank" class="gift-link">Motocykl Street R 125cc Barton Motors</a>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <div class="gift-info">
-      <a href="https://www.lunica.cz/0801-visaci-nausnice-lapac-snu/" target="_blank" class="gift-link">Visací náušnice Lapač snů</a>
-    </div>
-  </div>
-
-  <div class="gift-item">
-    <div class="gift-info">
-      <a href="https://www.alza.cz/sport/master-paddleboard-aqua-marvin-10-d7563255.htm" target="_blank" class="gift-link">Master Paddleboard Aqua Marvin 10</a>
-    </div>
-  </div>
-
 </body>
 </html>
