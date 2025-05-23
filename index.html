@@ -15,7 +15,7 @@
       font-family: Arial, sans-serif;
     }
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       background: white;
       padding: 2rem;
@@ -23,34 +23,144 @@
       box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
       text-align: center;
     }
-    a.btn-wishlist {
-      margin-top: 1.5rem;
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: white;
-      background-color: #0d6efd;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
+    .wishlist-item {
+      margin-bottom: 2rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.5rem;
     }
-    a.btn-wishlist:hover {
-      background-color: #084cd0;
+    .wishlist-item:last-child {
+      border-bottom: none;
+    }
+    .wishlist-item img {
+      max-width: 150px;
+      height: auto;
+      float: right;
+      margin-left: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .wishlist-item h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+    .wishlist-item a {
       text-decoration: none;
+      color: #0d6efd;
+    }
+    .wishlist-item a:hover {
+      text-decoration: underline;
+    }
+    .price {
+      font-weight: 600;
+      margin-top: 0.5rem;
+      color: #444;
+    }
+    h1 {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Kačka - Můj Wishlist 🎁</h1>
-    <p>Podívej se na můj seznam přání k narozeninám na GitHubu.</p>
-    <a
-      href="https://github.com/4ME280-Webdesign-a-uzivatelska-rozhrani/kacka-v-wishlist/blob/3b0f149f0620803ca1898db944f8b616d5e87d63/darky"
-      target="_blank"
-      class="btn-wishlist"
-      >Zobrazit Wishlist</a
-    >
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.snowboard-zezula.cz/snowboard-jones-wms-dream-weaver/pn-145892" target="_blank" rel="noopener noreferrer">
+          Snowboard Jones WMS Dream Weaver
+        </a>
+      </h3>
+      <img src="https://i.snbz.cz/products/1500x1500/shop1/snowboard-jones-wms-dream-weaver.jpeg" alt="Snowboard Jones WMS Dream Weaver" />
+      <div class="price">Cena: 14 990 Kč</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://travelking.cz/darkovy-poukaz" target="_blank" rel="noopener noreferrer">
+          Dárkový poukaz na cestování (Travelking)
+        </a>
+      </h3>
+      <img src="https://travelking.cdn.it7.sk/img/infopages/v2/landing-page/2024/gift-coupons/vanoce_2_CZ.webp" alt="Dárkový poukaz Travelking" />
+      <div class="price">Cena: od 1 000 Kč</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.jarmy.cz/led-poi-oddballs-70mm-usb-pro-dobijeci" target="_blank" rel="noopener noreferrer">
+          LED poi Oddballs 70mm (USB dobíjecí)
+        </a>
+      </h3>
+      <img src="https://www.jarmy.cz/fotky57821/fotos/_vyr_333_svitici-poi-oddballs-70mm-jarmy-001.jpg" alt="LED poi Oddballs 70mm" />
+      <div class="price">Cena: cca 1 800 Kč</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.alza.cz/dji-mavic-4-pro-d12920805.htm" target="_blank" rel="noopener noreferrer">
+          Dron DJI Mavic 4 Pro
+        </a>
+      </h3>
+      <img src="https://image.alza.cz/products/DJI2543/DJI2543.jpg?width=1400&height=1400" alt="Dron DJI Mavic 4 Pro" />
+      <div class="price">Cena: cca 49 000 Kč</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://bwtbooks.cz/kniha/petr-jan-juracka-nejsou-to-slapky" target="_blank" rel="noopener noreferrer">
+          Kniha „Nejsou to šlapky“ – Petr Jan Juračka
+        </a>
+      </h3>
+      <img src="https://bwtbooks.cz/assets/img//books/nejsou_to_slapky_obalka.jpg" alt="Kniha Nejsou to šlapky" />
+      <div class="price">Cena: 590 Kč</div>
+      <div style="clear: both;"></div>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.drawplanet.cz/kurz/kurz-akvarel-ilustrace/" target="_blank" rel="noopener noreferrer">
+          Kurz Akvarel & ilustrace (DrawPlanet)
+        </a>
+      </h3>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.smichoffer.cz/poukazky/permanentky/darkova-poukazka-na-studentskou-permanentku-na-10-vstupu.html" target="_blank" rel="noopener noreferrer">
+          Dárková permanentka na 10 vstupů (Smíchoffer)
+        </a>
+      </h3>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.luskni.cz/e-shop/motocykly-a-skutry-gg/motocykl-street-r-125cc-barton-motors-cerno-cervena-60376/" target="_blank" rel="noopener noreferrer">
+          Motocykl Street R 125cc Barton Motors
+        </a>
+      </h3>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.lunica.cz/0801-visaci-nausnice-lapac-snu/" target="_blank" rel="noopener noreferrer">
+          Visací náušnice Lapač snů
+        </a>
+      </h3>
+    </div>
+
+    <div class="wishlist-item">
+      <h3>
+        <a href="https://www.alza.cz/sport/master-paddleboard-aqua-marvin-10-d7563255.htm" target="_blank" rel="noopener noreferrer">
+          Master Paddleboard Aqua Marvin 10
+        </a>
+      </h3>
+    </div>
+
   </div>
 </body>
 </html>
