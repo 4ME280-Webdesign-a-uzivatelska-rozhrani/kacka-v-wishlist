@@ -35,18 +35,22 @@
 
   <script>
     const PROXY_URL = "https://kacka-v-proxy.vrbk03.workers.dev/api";
-
     let wishlistData = [];
 
     async function loadWishlist() {
-      const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9/latest`);
-      if (!res.ok) {
-        alert("Chyba při načítání wishlistu.");
-        return;
+      try {
+        const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9/latest`);
+        if (!res.ok) {
+          alert("Chyba při načítání wishlistu.");
+          return;
+        }
+        const data = await res.json();
+        wishlistData = data.record;
+        renderWishlist();
+      } catch (error) {
+        alert("Chyba připojení k serveru.");
+        console.error(error);
       }
-      const data = await res.json();
-      wishlistData = data.record;
-      renderWishlist();
     }
 
     function renderWishlist() {
@@ -74,18 +78,23 @@
         wishlistData[index].buyer = input.value.trim();
       });
 
-      const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(wishlistData)
-      });
+      try {
+        const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(wishlistData)
+        });
 
-      if (res.ok) {
-        alert("✅ Uloženo!");
-      } else {
-        alert("❌ Chyba při ukládání.");
+        if (res.ok) {
+          alert("✅ Uloženo!");
+        } else {
+          alert("❌ Chyba při ukládání.");
+        }
+      } catch (error) {
+        alert("Chyba připojení při ukládání.");
+        console.error(error);
       }
     });
 
