@@ -34,17 +34,16 @@
   </div>
 
   <script>
-    const BIN_ID = "683040cd8561e97a501a6fc9";
-    const MASTER_KEY = "$2a$10$LZN36onOi89Sk2f8utU/1eTCQzArXTncqIw8fujmsjflHNh./6.O.";
+    const PROXY_URL = "https://kacka-v-proxy.vrbk03.workers.dev/api";
 
     let wishlistData = [];
 
     async function loadWishlist() {
-      const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
-        headers: {
-          "X-Master-Key": MASTER_KEY
-        }
-      });
+      const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9/latest`);
+      if (!res.ok) {
+        alert("Chyba při načítání wishlistu.");
+        return;
+      }
       const data = await res.json();
       wishlistData = data.record;
       renderWishlist();
@@ -75,11 +74,10 @@
         wishlistData[index].buyer = input.value.trim();
       });
 
-      const res = await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+      const res = await fetch(`${PROXY_URL}/b/683040cd8561e97a501a6fc9`, {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json",
-          "X-Master-Key": MASTER_KEY
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(wishlistData)
       });
